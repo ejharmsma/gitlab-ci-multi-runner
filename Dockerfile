@@ -1,5 +1,7 @@
 FROM docker:latest
 
+MAINTAINER Edwin Harmsma <edwin.harmsma@tno.nl>
+
 # Bash and Git are required for CI runner clone and run
 RUN apk --no-cache add bash git && \
     wget -O gitlab-ci-multi-runner https://gitlab-ci-multi-runner-downloads.s3.amazonaws.com/latest/binaries/gitlab-ci-multi-runner-linux-amd64 && \
