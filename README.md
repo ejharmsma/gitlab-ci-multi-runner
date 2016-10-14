@@ -16,7 +16,11 @@ Minimal Alpine based Gitlab CI Multi Runner container that supports docker-in-do
     docker run -it --rm -v /srv/my-ci-runner-config:/gitlab-config ejharmsma/gitlab-ci-multi-runner register
     ```
     
-    And fill in the registration questions.
+    And fill in the registration questions. Or for example in unattended mode:
+    
+    ```
+    docker run -it --rm -v /srv/config:/gitlab-config ejharmsma/gitlab-ci-multi-runner register -n -u YOUR_GITLAB_URL -r YOUR_TOKEN --executor docker --docker-image busybox
+    ```
     
 3. Start runner in background (and link to dockerd container of step 1)
 
