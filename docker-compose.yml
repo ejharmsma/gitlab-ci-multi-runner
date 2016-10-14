@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+
+  runner:
+    build: .
+    volumes:
+      - /srv/config:/gitlab-config
+    depends_on:
+      - docker-service
+
+  docker-service:
+    image: docker:dind
+    privileged: true
+
