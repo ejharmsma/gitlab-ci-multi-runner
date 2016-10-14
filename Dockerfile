@@ -13,7 +13,8 @@ VOLUME ["/gitlab-config"]
 
 ENV CONFIG_FILE=/gitlab-config/config.toml
 
-ENTRYPOINT ["./gitlab-ci-multi-runner"]
+# TODO: ENABLE ENTRYPOINT AGAIN
+#ENTRYPOINT ["./gitlab-ci-multi-runner"]
 
-CMD ["run"]
+CMD ["./gitlab-ci-multi-runner", "run"]
 
