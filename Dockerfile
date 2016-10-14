@@ -11,6 +11,9 @@ RUN apk --no-cache add bash git && \
 # Volume to store the config file
 VOLUME ["/gitlab-config"]
 
+ENV CONFIG_FILE=/gitlab-config/config.toml
+
 ENTRYPOINT ["./gitlab-ci-multi-runner"]
 
-CMD ["run", "-c", "/gitlab-config/config.toml"]
+CMD ["run"]
+
