@@ -3,7 +3,7 @@ version: '2'
 services:
 
   runner:
-    build: .
+    build: ..
     volumes:
       - /srv/config:/gitlab-config
     depends_on:
